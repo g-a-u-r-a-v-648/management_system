@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'UI/Login.dart';
-import 'UI/Splash.dart';
+import 'package:management_system/UI/Splash.dart';
 
 void main() {
   runApp(MyApp());

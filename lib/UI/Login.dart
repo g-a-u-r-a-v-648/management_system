@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:management_system/UI/Splash.dart';
-
-import 'login1.dart';
+import 'package:management_system/UI/Signup.dart';
+import 'package:management_system/UI/login1.dart';
 
 class Login extends StatefulWidget {
   Login({Key? key}) : super(key: key);
@@ -58,6 +57,27 @@ class _LoginState extends State<Login> {
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   )),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              width: 300,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  gradient: LinearGradient(colors: [
+                    Color.fromRGBO(143, 148, 251, 1),
+                    Color.fromRGBO(143, 148, 991, .6),
+                  ])),
+              child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Signup()));
+                  },
+                  child: Text(
+                    "Signup",
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  )),
+            )
           ],
         ),
       ),

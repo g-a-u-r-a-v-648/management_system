@@ -15,24 +15,32 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 4),
+        Duration(seconds: 3),
         () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (BuildContext context) => Login())));
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
-      body: Center(
-          child: Stack(
-        children: [
-          Image.asset("lib/Images/download.png", height: 130, width: 130),
-          Text(
-            "Flutter",
-            style: TextStyle(fontSize: 20),
+      body: Container(
+        color: Colors.grey,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                  child: Image.asset("lib/Images/icon.png",
+                      height: 70, width: 70)),
+              const Center(
+                  child: Text(
+                "FLUTTER",
+                style: TextStyle(fontSize: 20),
+              ))
+            ],
           ),
-        ],
-      )),
+        ),
+      ),
     );
   }
 }
