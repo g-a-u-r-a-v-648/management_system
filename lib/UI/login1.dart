@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:management_system/UI/Homepage.dart';
+import 'package:management_system/UI/Homepage1.dart';
 
 class Login1 extends StatefulWidget {
   Login1({Key? key}) : super(key: key);
@@ -9,6 +10,8 @@ class Login1 extends StatefulWidget {
 }
 
 class _Login1State extends State<Login1> {
+  bool _obscureText = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,17 +84,26 @@ class _Login1State extends State<Login1> {
                           TextField(
                             obscureText: true,
                             decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.password),
-                              hintText: "enter your password",
-                              labelText: "Passward",
-                            ),
+                                prefixIcon: Icon(Icons.password),
+                                hintText: "enter your password",
+                                labelText: "Passward",
+                                suffixIcon: GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      _obscureText = !_obscureText;
+                                    });
+                                  },
+                                  child: Icon(_obscureText
+                                      ? Icons.visibility
+                                      : Icons.visibility_off),
+                                )),
                           )
                         ],
                       ),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 120, left: 250),
+                    padding: const EdgeInsets.only(top: 140, left: 270),
                     child: CircleAvatar(
                         backgroundColor: Colors.purpleAccent,
                         radius: 30,

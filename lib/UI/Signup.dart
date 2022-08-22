@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:management_system/UI/login1.dart';
 
 class Signup extends StatefulWidget {
-  Signup({Key? key}) : super(key: key);
+  const Signup({Key? key}) : super(key: key);
 
   @override
   State<Signup> createState() => _SignupState();
@@ -67,8 +67,8 @@ class _SignupState extends State<Signup> {
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    hintText: "enter your passward",
-                    labelText: "Passward"),
+                    hintText: "enter your password",
+                    labelText: "Password"),
               ),
             ),
             Padding(
@@ -78,8 +78,8 @@ class _SignupState extends State<Signup> {
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    hintText: "re-enter your passward",
-                    labelText: "Confirm Passward"),
+                    hintText: "re-enter your password",
+                    labelText: "Confirm Password"),
               ),
             ),
             Padding(

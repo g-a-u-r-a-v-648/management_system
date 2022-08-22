@@ -10,12 +10,8 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-          title: Text(
-        "ncbsidbj",
-        style: TextStyle(fontSize: 20),
-      )),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,7 +37,7 @@ class _HomepageState extends State<Homepage> {
                       height: 10,
                     ),
                     Image.asset(
-                      "lib/Images/home/Register.png",
+                      "lib/Images/home/register.png",
                       height: 80,
                       width: 80,
                     ),

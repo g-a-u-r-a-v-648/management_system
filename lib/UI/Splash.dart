@@ -23,7 +23,7 @@ class _SplashscreenState extends State<Splashscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.grey,
+        color: Colors.white,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -31,12 +31,12 @@ class _SplashscreenState extends State<Splashscreen> {
             children: [
               Center(
                   child: Image.asset("lib/Images/icon.png",
-                      height: 70, width: 70)),
-              const Center(
-                  child: Text(
-                "FLUTTER",
-                style: TextStyle(fontSize: 20),
-              ))
+                      height: 150, width: 150)),
+              // const Center(
+              //     child: Text(
+              //   "FLUTTER",
+              //   style: TextStyle(fontSize: 20),
+              // ))
             ],
           ),
         ),
